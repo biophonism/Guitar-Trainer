@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Guitar Trainer</title>
+</head>
+
+<body>
+    <div class="sidenav">
+        <h1>Guitar Trainer</h1>
+        <hr>
+        <a class="sideLink hue" id="fretLink" href="#">Notes</a>
+        <a class="sideLink" id="intvLink" href="#">Intervals</a>
+        <a class="sideLink" id="degrLink" href="#">Degrees</a>
+    </div>
+    <div id="fret" class="main">
+        <h1>Fretboard trainer</h1>
+        You can use ABCDEFG keys to input notes! (holding shift sharps them)<br>
+        <canvas class="fbCanvas" id="fretCanvas" width="512" height="120"></canvas><br>
+        <div id="fretText" class="textOutput"></div><br>
+        Fret range:
+        <select id="fretSel">
+            <option value="firstFive">1~5</option>
+            <option value="lastSix">6~11</option>
+            <option value="oneEleven">1~11</option>
+        </select>
+    </div>
+    <div id="intv" class="main">
+        <h1>Interval Trainer</h1>
+        You can use numeric keys to input intervals! (hold shift to sharp and backslash to flat them)<br>
+        <canvas class="fbCanvas" id="intvCanvas" width="512" height="120"></canvas><br>
+        <div id="intvText" class="textOutput"></div><br>
+        Mode:
+        <select id="intvSel">
+            <option value="near">Near</option>
+            <option value="all">All</option>
+            <option value="same">Same string</option>
+        </select>
+    </div>
+    <div id="degr" class="main">
+        <h1>Degree Trainer</h1>
+        You can use numeric keys to input degrees! (hold shift to sharp and backslash to flat them)<br>
+        <canvas class="fbCanvas" id="degrCanvas" width="512" height="120"></canvas><br>
+        <div id="degrText" class="textOutput"></div><br>
+        Key:
+        <select id="degrSel">
+            <option value="0">C</option>
+            <option value="1">C#</option>
+            <option value="2">D</option>
+            <option value="3">D#</option>
+            <option value="4">E</option>
+            <option value="5">F</option>
+            <option value="6">F#</option>
+            <option value="7">G</option>
+            <option value="8">G#</option>
+            <option value="9">A</option>
+            <option value="10">A#</option>
+            <option value="11">B</option>
+        </select>
+    </div>
+    <script src="guitar.js"></script>
+    <script src="chords.js"></script>
+</body>
+
+</html>
